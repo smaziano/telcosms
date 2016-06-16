@@ -1,8 +1,6 @@
 # Telcosms
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/telcosms`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A ruby gem createb by [SmartTechys](http://www.smarttechys.co.ao) for the [TelcoSMS](http://telcosms.co.ao) API that allows your application to send sms to Angolan Numbers.
 
 ## Installation
 
@@ -20,19 +18,42 @@ Or install it yourself as:
 
     $ gem install telcosms
 
+## Setup
+Make sure you have access to your username and password that can be requested to the TelcoSMS crew.
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+## Use the class methods to get it going
+
+# New Message
+## You need to pass 5 arguments to make it work (numbers, message, username, password, servico)
+
+Telcosms.new_sms(numbers, message, username, password, servico)
+
+## numbers is an array of the numbers you want to send the sms.
+## message is a string os characters that contain the message.
+## username is a string with username given by the Telcosms crew(as best practive, use environment variable).
+## password is a string with password given by the Telcosms crew(as best practive, use environment variable).
+## servico is a string with the text that will show up as contact sender.
+
+## Help and Docs
+
+- [TelcoSMS](http://telcosms.co.ao)
+- [RDOC](http://www.rubydoc.info/gems/telcosms/0.0.1)
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- You can fork it
+- bundle
+- bundle rake exec
+- Make your feature addition or fix a bug
+- Do not  mess with the rakefile version or history (do not submit version bump PLEASE or put it in a different commit so we can ignore it when pull)
+- Send us the pull request
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/telcosms. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smaziano/telcosms. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
