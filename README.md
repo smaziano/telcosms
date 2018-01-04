@@ -40,7 +40,7 @@ Telcosms.new_sms(numbers, message, username, password, servico)
 ## Help and Docs
 
 - [TelcoSMS](http://telcosms.co.ao)
-- [RDOC](http://www.rubydoc.info/gems/telcosms/0.0.1)
+- [RDOC](http://www.rubydoc.info/gems/telcosms/0.0.4)
 
 ## Development
 
