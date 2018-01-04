@@ -3,7 +3,8 @@ require "httparty"
 
 module Telcosms
 	include HTTParty
-	base_uri "196.216.53.194:9501"
+	#base_uri "196.216.53.194:9501"
+	base_uri "41.210.223.124:9503"
   
   # send a message
   def self.new_sms(numbers, message, username, password, servico)
