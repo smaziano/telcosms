@@ -1,3 +1,3 @@
-module Telcosms
-  VERSION = "0.0.5"
+module TelcosmsModule
+  VERSION = "1.0.0"
 end

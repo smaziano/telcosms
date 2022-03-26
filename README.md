@@ -1,6 +1,6 @@
 # Telcosms
 
-A ruby gem created by [NEXT Solutions](http://www.nextbss.co.ao/) for the [TelcoSMS](http://telcosms.co.ao) API that allows your application to send sms to Angolan Numbers.
+A ruby gem created by [Sergio Maziano](http://github.com/smaziano) for the [TelcoSMS](http://telcosms.co.ao) API that allows your application to send sms to Angolan Numbers.
 
 ## Installation
 
@@ -19,28 +19,32 @@ Or install it yourself as:
     $ gem install telcosms
 
 ## Setup
-Make sure you have access to your username and password that can be requested to the TelcoSMS crew.
+Make sure you have access to your username and password (can be requested to the TelcoSMS team)
+and setup as your environment variables.
+
+### Environment variables
+|Env Variable|Value|
+|-|-|
+|TELCOSMS_USERNAME| The username provided by TelcoSMS|
+|TELCOSMS_PASSWORD| The password provided by TelcoSMS|
 
 ## Usage
-
+You need to pass 3 arguments to make it work (number, message, service).
 ```ruby
-## Use the class methods to get it going
-
-# New Message
-## You need to pass 5 arguments to make it work (numbers, message, username, password, servico)
-
-Telcosms.new_sms(numbers, message, username, password, servico)
-
-## numbers is an array of the numbers you want to send the sms.
-## message is a string os characters that contain the message.
-## username is a string with username given by the Telcosms crew(as best practive, use environment variable).
-## password is a string with password given by the Telcosms crew(as best practive, use environment variable).
-## servico is a string with the text that will show up as contact sender.
+telco = Telcosms.new
+telco.send(number: '+244923456789', message: 'Hello World\nNext line', service: 'TelcoSMS')
+```
+## Schema
+|field |type|notes|
+|-|-|-|
+|number|string|number with or without a country code|
+|message|string|the message content|
+|service|string|sender identifier |
 
 ## Help and Docs
 
 - [TelcoSMS](http://telcosms.co.ao)
-- [RDOC](http://www.rubydoc.info/gems/telcosms/0.0.4)
+- [RDOC](http://www.rubydoc.info/gems/telcosms/1.0.0)
 
 ## Development
 
@@ -59,4 +63,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/smazia
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
