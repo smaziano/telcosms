@@ -6,7 +6,6 @@ class Telcosms
   def initialize(username: set_username, password: set_password, service: nil)
     @username = username
     @password = password
-    @service ||= service
   end
 
   private

@@ -7,10 +7,10 @@ module TelcosmsModule
   follow_redirects false
 	base_uri "196.216.53.194:9501"
   
-  def send(number:, message:, service: @service)
+  def send(number:, message:, service:)
     content = set_headers
     text = URI::Parser.new
-    request = HTTParty.post("#{host}/api?action=sendmessage&username=#{@username}&password=#{@password}&recipient=#{number}&messagetype=SMS:TEXT&messagedata=#{text.escape(message)}&originator=#{@service}", content)
+    request = HTTParty.post("#{host}/api?action=sendmessage&username=#{@username}&password=#{@password}&recipient=#{number}&messagetype=SMS:TEXT&messagedata=#{text.escape(message)}&originator=#{service}", content)
     return request
   end
 

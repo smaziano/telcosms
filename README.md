@@ -29,7 +29,7 @@ and setup as your environment variables.
 |TELCOSMS_PASSWORD| The password provided by TelcoSMS|
 
 ## Usage
-You need to pass 2 arguments to make it work (number, message). You can add a third argument to customize the sender identifier when sending the message.
+You need to pass 3 arguments to make it work (number, message, service).
 ```ruby
 telco = Telcosms.new
 telco.send(number, message, service)
@@ -39,7 +39,7 @@ telco.send(number, message, service)
 |-|-|-|
 |number|string|number with or without a country code|
 |message|string|the message content|
-|service|string|sender identifier (optional) |
+|service|string|sender identifier |
 
 ## Help and Docs
 
