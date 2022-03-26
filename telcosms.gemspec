@@ -1,11 +1,10 @@
-# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'telcosms/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "telcosms"
-  spec.version       = Telcosms::VERSION
+  spec.version       = TelcosmsModule::VERSION
   spec.authors       = ["Sergio Maziano"]
   spec.email         = ["sergio.maziano@gmail.com"]
 
@@ -14,13 +13,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/smaziano/telcosms"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  #if spec.respond_to?(:metadata)
-  spec.metadata['allowed_push_host'] = "https://rubygems.org"
+  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
+    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  end
 
-
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
