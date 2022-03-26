@@ -32,7 +32,7 @@ and setup as your environment variables.
 You need to pass 3 arguments to make it work (number, message, service).
 ```ruby
 telco = Telcosms.new
-telco.send(number, message, service)
+telco.send(number: '+244923456789', message: 'Hello World\nNext line', service: 'TelcoSMS')
 ```
 ## Schema
 |field |type|notes|
