@@ -3,10 +3,10 @@ require_relative "telcosms_module"
 class Telcosms
   include TelcosmsModule
 
-  def initialize(username: set_username, password: set_password, service: 'TelcoSMS')
+  def initialize(username: set_username, password: set_password, service: nil)
     @username = username
     @password = password
-    @service = service
+    @service ||= service
   end
 
   private
