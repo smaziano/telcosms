@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["sergio.maziano@gmail.com"]
 
   spec.summary       = %q{A Ruby gem for TelcoSMS API(http://telcosms.co.ao) made by Sergio Maziano(http://github.com/smaziano)}
-  spec.description   = %q{A Ruby gem to connect your application with the TelcoSMS API(http://telcosms.co.ao) to allow your application to send sms through Angolan numbers}
-  spec.homepage      = "https://github.com/nextbss/telcosms"
+  spec.description   = %q{A Ruby gem to connect your application with the TelcoSMS API's (http://telcosms.co.ao) to allow your application to send sms through Angolan numbers}
+  spec.homepage      = "https://github.com/smaziano/telcosms"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

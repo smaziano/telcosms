@@ -1,14 +1,20 @@
-require "telcosms/version"
-require "httparty"
+require_relative "telcosms_module"
 
-module Telcosms
-	include HTTParty
-	base_uri "196.216.53.194:9501"
-  
-  # send a message
-  def self.new_sms(numbers, message, username, password, servico)
-  	numbers.each do |number|
-  		post("/api?action=sendmessage&username=#{username}&password=#{password}&recipient=#{number}&messagetype=SMS:TEXT&messagedata=#{message}&originator=#{servico}", :headers => {'Content-Type' => 'application/json'}).parsed_response
-		end
-  end	
+class Telcosms
+  include TelcosmsModule
+
+  def initialize(username: set_username, password: set_password, service: 'TelcoSMS')
+    @username = username
+    @password = password
+    @service = service
+  end
+
+  private
+    def set_username
+      ENV.fetch('TELCOSMS_USERNAME')
+    end
+
+    def set_password
+      ENV.fetch('TELCOSMS_PASSWORD')
+    end
 end
