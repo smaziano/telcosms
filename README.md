@@ -44,7 +44,7 @@ telco.send(number: '+244923456789', message: 'Hello World\nNext line', service: 
 ## Help and Docs
 
 - [TelcoSMS](http://telcosms.co.ao)
-- [RDOC](http://www.rubydoc.info/gems/telcosms/1.0.0)
+- [RDOC](http://www.rubydoc.info/gems/telcosms/1.0.1)
 
 ## Development
 
