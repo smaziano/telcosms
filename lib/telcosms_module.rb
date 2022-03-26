@@ -9,8 +9,8 @@ module TelcosmsModule
   
   def send(number:, message:, service: @service)
     content = set_headers
-    msg_encoded = URI.encode(message)
-    request = HTTParty.post("#{host}/api?action=sendmessage&username=#{@username}&password=#{@password}&recipient=#{number}&messagetype=SMS:TEXT&messagedata=#{msg_encoded}&originator=#{@service}", content)
+    text = URI::Parser.new
+    request = HTTParty.post("#{host}/api?action=sendmessage&username=#{@username}&password=#{@password}&recipient=#{number}&messagetype=SMS:TEXT&messagedata=#{text.escape(message)}&originator=#{@service}", content)
     return request
   end
 
