@@ -1,4 +1,4 @@
-# Telcosms
+# TelcoSMS
 
 A ruby gem created by [Sergio Maziano](http://github.com/smaziano) for the [TelcoSMS](http://telcosms.co.ao) API that allows your application to send sms to Angolan Numbers.
 
